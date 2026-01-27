@@ -1,4 +1,4 @@
-# 🏁 F1 Racing Hub
+# F1 Racing 
 
 Página web interactiva dedicada a la **Fórmula 1** con información sobre escuderías, estadísticas y clasificación de pilotos.
 
