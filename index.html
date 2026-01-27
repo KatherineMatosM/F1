@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 Racing Hub</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Speed Lines Effect -->
+    <div class="speed-line" style="animation-delay: 0s;"></div>
+    <div class="speed-line" style="animation-delay: 0.5s; top: 60%;"></div>
+    <div class="speed-line" style="animation-delay: 1s; top: 40%;"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#inicio"><i class="fas fa-flag-checkered"></i> Inicio</a></li>
+            <li><a href="#equipos"><i class="fas fa-users"></i> Equipos</a></li>
+            <li><a href="#estadisticas"><i class="fas fa-chart-line"></i> Stats</a></li>
+            <li><a href="#clasificacion"><i class="fas fa-trophy"></i> Clasificación</a></li>
+            <li><a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero" id="inicio">
+        <div class="hero-content">
+            <h1>F1 RACING</h1>
+            <p class="subtitle">VELOCIDAD • PASIÓN • GLORIA</p>
+            <button class="cta-button" onclick="scrollToSection('equipos')">
+                <i class="fas fa-bolt"></i> INICIAR MOTORES
+            </button>
+        </div>
+    </div>
+
+    <!-- Teams Section -->
+    <section id="equipos">
+        <div class="container">
+            <h2><i class="fas fa-flag"></i> ESCUDERÍAS</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-car"></i></div>
+                    <h3>Mercedes-AMG Petronas</h3>
+                    <p>Dominación en la era híbrida con tecnología de punta y pilotos de élite mundial.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-horse"></i></div>
+                    <h3>Scuderia Ferrari</h3>
+                    <p>La escudería más antigua y emblemática de la Fórmula 1 con historia legendaria.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-bolt"></i></div>
+                    <h3>Red Bull Racing</h3>
+                    <p>Innovación y velocidad extrema con los mejores ingenieros del paddock.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>McLaren Racing</h3>
+                    <p>Tradición británica con tecnología aerodinámica de vanguardia.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Aston Martin F1</h3>
+                    <p>Elegancia británica combinada con ingeniería de alta performance.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-fire"></i></div>
+                    <h3>Alpine F1 Team</h3>
+                    <p>Espíritu francés con motores Renault de máxima potencia.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-crown"></i></div>
+                    <h3>Williams Racing</h3>
+                    <p>Historia rica en campeonatos con un enfoque renovado en la innovación.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-globe"></i></div>
+                    <h3>Haas F1 Team</h3>
+                    <p>El equipo estadounidense que ha irrumpido con fuerza en la Fórmula 1.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-cogs"></i></div>
+                    <h3>Kick Sauber F1 Team</h3>
+                    <p>Equipo suizo con enfoque en la precisión y la eficiencia técnica.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-bullseye"></i></div>
+                    <h3>Racing Bulls F1 Team</h3>
+                    <p>Equipo joven con ambiciones de desafiar a los grandes en cada carrera.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section id="estadisticas">
+        <div class="container">
+            <h2><i class="fas fa-tachometer-alt"></i> ESTADÍSTICAS DE TEMPORADA</h2>
+            
+            <div class="stats-container">
+                <div class="stat">
+                    <div class="stat-icon"><i class="fas fa-flag-checkered"></i></div>
+                    <div class="stat-number" id="races-counter">0</div>
+                    <div class="stat-label">Carreras</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-icon"><i class="fas fa-globe"></i></div>
+                    <div class="stat-number" id="countries-counter">0</div>
+                    <div class="stat-label">Países</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-icon"><i class="fas fa-stopwatch"></i></div>
+                    <div class="stat-number" id="laps-counter">0</div>
+                    <div class="stat-label">Vueltas</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-icon"><i class="fas fa-gauge-high"></i></div>
+                    <div class="stat-number">350</div>
+                    <div class="stat-label">km/h MAX</div>
+                </div>
+            </div>
+
+            <h2 style="margin-top: 4rem;"><i class="fas fa-map-marked-alt"></i> CARRERAS</h2>
+            
+            <div class="race-track">
+                <div class="track-info">
+                    <h3>Gran Premio de Mónaco</h3>
+                    <div class="track-details">
+                        <div class="track-detail">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>25 Mayo 2025</span>
+                        </div>
+                        <div class="track-detail">
+                            <i class="fas fa-map-pin"></i>
+                            <span>Monte Carlo</span>
+                        </div>
+                        <div class="track-detail">
+                            <i class="fas fa-road"></i>
+                            <span>3.337 km</span>
+                        </div>
+                        <div class="track-detail">
+                            <i class="fas fa-sync"></i>
+                            <span>78 Vueltas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="race-track">
+                <div class="track-info">
+                    <h3>Gran Premio de España</h3>
+                    <div class="track-details">
+                        <div class="track-detail">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>01 Junio 2025</span>
+                        </div>
+                        <div class="track-detail">
+                            <i class="fas fa-map-pin"></i>
+                            <span>Barcelona</span>
+                        </div>
+                        <div class="track-detail">
+                            <i class="fas fa-road"></i>
+                            <span>4.675 km</span>
+                        </div>
+                        <div class="track-detail">
+                            <i class="fas fa-sync"></i>
+                            <span>66 Vueltas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leaderboard Section -->
+    <section id="clasificacion">
+        <div class="container">
+            <h2><i class="fas fa-trophy"></i> CLASIFICACIÓN DE PILOTOS</h2>
+            
+            <div class="leaderboard">
+                <div class="leaderboard-header">
+                    <div>POS</div>
+                    <div>PILOTO</div>
+                    <div>PUNTOS</div>
+                    <div>EQUIPO</div>
+                </div>
+                
+                <div class="leaderboard-row">
+                    <div class="position">1</div>
+                    <div class="driver-name">
+                        <i class="fas fa-crown" style="color: gold;"></i>
+                        Lando Norris
+                    </div>
+                    <div class="points">423</div>
+                    <div>Mclaren</div>
+                </div>
+                
+                <div class="leaderboard-row">
+                    <div class="position">2</div>
+                    <div class="driver-name">
+                        <i class="fas fa-medal" style="color: silver;"></i>
+                        Max Verstappen
+                    </div>
+                    <div class="points">421</div>
+                    <div>Red Bull Racing</div>
+                </div>
+                
+                <div class="leaderboard-row">
+                    <div class="position">3</div>
+                    <div class="driver-name">
+                        <i class="fas fa-medal" style="color: #cd7f32;"></i>
+                        Oscar Piastri
+                    </div>
+                    <div class="points">410</div>
+                    <div>Mclaren</div>
+                </div>
+                
+                <div class="leaderboard-row">
+                    <div class="position">4</div>
+                    <div class="driver-name">
+                        <i class="fas fa-user-circle"></i>
+                        George Russell
+                    </div>
+                    <div class="points">319</div>
+                    <div>Mercedes</div>
+                </div>
+                
+                <div class="leaderboard-row">
+                    <div class="position">5</div>
+                    <div class="driver-name">
+                        <i class="fas fa-user-circle"></i>
+                        Charles Leclerc
+                    </div>
+                    <div class="points">242</div>
+                    <div>Scuderia Ferrari</div>
+                </div>
+
+                <div class="leaderboard-row">
+                    <div class="position">6</div>
+                    <div class="driver-name">
+                        <i class="fas fa-user-circle"></i>
+                        Lewis Hamilton
+                    </div>
+                    <div class="points">156</div>
+                    <div>Scuderia Ferrari</div>
+                </div>
+
+                <div class="leaderboard-row">
+                    <div class="position">7</div>
+                    <div class="driver-name">
+                        <i class="fas fa-user-circle"></i>
+                        Kimi Antonelli
+                    </div>
+                    <div class="points">150</div>
+                    <div>Mercedes</div>
+                </div>
+
+                <div class="leaderboard-row">
+                    <div class="position">8</div>
+                    <div class="driver-name">
+                        <i class="fas fa-user-circle"></i>
+                        Alexander Albon
+                    </div>
+                    <div class="points">73</div>
+                    <div>Williams</div>
+                </div>
+
+                <div class="leaderboard-row">
+                    <div class="position">9</div>
+                    <div class="driver-name">
+                        <i class="fas fa-user-circle"></i>
+                        Carlos Sainz
+                    </div>
+                    <div class="points">64</div>
+                    <div>Williams</div>
+                </div>
+
+                <div class="leaderboard-row">
+                    <div class="position">10</div>
+                    <div class="driver-name">
+                        <i class="fas fa-user-circle"></i>
+                        Fernando Alonso
+                    </div>
+                    <div class="points">56</div>
+                    <div>Aston Martin</div>
+                </div>
+                
+                <div class="leaderboard-row">
+                    <div class="position">11</div>
+                    <div class="driver-name">
+                        <i class="fas fa-user-circle"></i>
+                        Niko Hulkenberg
+                    </div>
+                    <div class="points">51</div>
+                    <div>Kick Sauber</div>
+                </div>
+
+                <div class="leaderboard-row">
+                    <div class="position">12</div>
+                    <div class="driver-name">
+                        <i class="fas fa-user-circle"></i>
+                        Isaac Hadjar
+                    </div>
+                    <div class="points">51</div>
+                    <div>Racing Bulls</div>
+                </div>
+
+                <div class="leaderboard-row">
+                    <div class="position">13</div>
+                    <div class="driver-name">
+                        <i class="fas fa-user-circle"></i>
+                        Oliver Bearman
+                    </div>
+                    <div class="points">41</div>
+                    <div>Haas</div>
+                </div>
+
+                <div class="leaderboard-row">
+                    <div class="position">14</div>
+                    <div class="driver-name">
+                        <i class="fas fa-user-circle"></i>
+                        Liam Lawson
+                    </div>
+                    <div class="points">38</div>
+                    <div>Racing Bulls</div>
+                </div>
+
+                <div class="leaderboard-row">
+                    <div class="position">15</div>
+                    <div class="driver-name">
+                        <i class="fas fa-user-circle"></i>
+                        Esteban Ocon
+                    </div>
+                    <div class="points">38</div>
+                    <div>Haas</div>
+                </div>
+
+                <div class="leaderboard-row">
+                    <div class="position">16</div>
+                    <div class="driver-name">
+                        <i class="fas fa-user-circle"></i>
+                        Lance Stroll
+                    </div>
+                    <div class="points">33</div>
+                    <div>Aston Martin</div>
+                </div>
+
+                <div class="leaderboard-row">
+                    <div class="position">17</div>
+                    <div class="driver-name">
+                        <i class="fas fa-user-circle"></i>
+                        Yuki Tsunoda
+                    </div>
+                    <div class="points">33</div>
+                    <div>Red Bull Racing</div>
+                </div>
+
+                <div class="leaderboard-row">
+                    <div class="position">18</div>
+                    <div class="driver-name">
+                        <i class="fas fa-user-circle"></i>
+                        Pierre Gasly
+                    </div>
+                    <div class="points">22</div>
+                    <div>Alpine</div>
+                </div>
+
+                <div class="leaderboard-row">
+                    <div class="position">19</div>
+                    <div class="driver-name">
+                        <i class="fas fa-user-circle"></i>
+                        Gabriel Bortoleto
+                    </div>
+                    <div class="points">19</div>
+                    <div>Kick Sauber</div>
+                </div>
+
+                <div class="leaderboard-row">
+                    <div class="position">20</div>
+                    <div class="driver-name">
+                        <i class="fas fa-user-circle"></i>
+                        Franco Colapinto
+                    </div>
+                    <div class="points">0</div>
+                    <div>Alpine</div>
+                </div>
+
+                <div class="leaderboard-row">
+                    <div class="position">21</div>
+                    <div class="driver-name">
+                        <i class="fas fa-user-circle"></i>
+                        Jack Doohan
+                    </div>
+                    <div class="points">0</div>
+                    <div>Alpine</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto">
+        <div class="container">
+            <h2><i class="fas fa-headset"></i> CONTACTO</h2>
+            <form class="contact-form" id="contact-form">
+                <div class="form-group">
+                    <label for="name">
+                        <i class="fas fa-user"></i> NOMBRE
+                    </label>
+                    <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">
+                        <i class="fas fa-envelope"></i> EMAIL
+                    </label>
+                    <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">
+                        <i class="fas fa-tag"></i> ASUNTO
+                    </label>
+                    <input type="text" id="subject" name="subject" placeholder="Asunto del mensaje" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">
+                        <i class="fas fa-comment"></i> MENSAJE
+                    </label>
+                    <textarea id="message" name="message" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i> ENVIAR MENSAJE
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p><i class="fas fa-copyright"></i> 2026 F1 Racing | Desplegado con GitHub Pages <i class="fas fa-rocket"></i></p>
+    </footer>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
